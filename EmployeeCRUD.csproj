@@ -61,6 +61,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="obj\Debug\EmployeeCRUD.Main.resources" />
+    <EmbeddedResource Include="obj\Debug\EmployeeCRUD.Properties.Resources.resources" />
     <EmbeddedResource Include="UI\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
@@ -73,7 +75,30 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="bin\Debug\EmployeeCRUD.exe.config" />
+    <None Include="bin\Debug\EmployeeDB.db" />
+    <None Include="bin\Debug\System.Data.SQLite.dll.config" />
+    <None Include="EmployeeDB.db" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Debug\EmployeeCRUD.csproj.CopyComplete" />
+    <None Include="obj\Debug\EmployeeCRUD.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Debug\EmployeeCRUD.csproj.GenerateResource.cache" />
+    <None Include="obj\Debug\EmployeeCRUD.csprojAssemblyReference.cache" />
     <None Include="packages.config" />
+    <None Include="packages\System.Data.SQLite.Core.1.0.111.0\.signature.p7s" />
+    <None Include="packages\System.Data.SQLite.Core.1.0.111.0\build\net20\System.Data.SQLite.Core.targets" />
+    <None Include="packages\System.Data.SQLite.Core.1.0.111.0\build\net40\System.Data.SQLite.Core.targets" />
+    <None Include="packages\System.Data.SQLite.Core.1.0.111.0\build\net451\System.Data.SQLite.Core.targets" />
+    <None Include="packages\System.Data.SQLite.Core.1.0.111.0\build\net45\System.Data.SQLite.Core.targets" />
+    <None Include="packages\System.Data.SQLite.Core.1.0.111.0\build\net46\System.Data.SQLite.Core.targets" />
+    <None Include="packages\System.Data.SQLite.Core.1.0.111.0\lib\net20\System.Data.SQLite.dll.config" />
+    <None Include="packages\System.Data.SQLite.Core.1.0.111.0\lib\net40\System.Data.SQLite.dll.config" />
+    <None Include="packages\System.Data.SQLite.Core.1.0.111.0\lib\net451\System.Data.SQLite.dll.config" />
+    <None Include="packages\System.Data.SQLite.Core.1.0.111.0\lib\net45\System.Data.SQLite.dll.config" />
+    <None Include="packages\System.Data.SQLite.Core.1.0.111.0\lib\net46\System.Data.SQLite.dll.config" />
+    <None Include="packages\System.Data.SQLite.Core.1.0.111.0\lib\netstandard2.0\System.Data.SQLite.dll.config" />
+    <None Include="packages\System.Data.SQLite.Core.1.0.111.0\System.Data.SQLite.Core.1.0.111.0.nupkg" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -86,6 +111,47 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\EmployeeCRUD.exe" />
+    <Content Include="bin\Debug\EmployeeCRUD.pdb" />
+    <Content Include="bin\Debug\System.Data.SQLite.dll" />
+    <Content Include="bin\Debug\System.Data.SQLite.xml" />
+    <Content Include="bin\Debug\x64\SQLite.Interop.dll" />
+    <Content Include="bin\Debug\x86\SQLite.Interop.dll" />
+    <Content Include="obj\Debug\EmployeeCRUD.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\EmployeeCRUD.exe" />
+    <Content Include="obj\Debug\EmployeeCRUD.pdb" />
+    <Content Include="packages\System.Data.SQLite.Core.1.0.111.0\build\net20\x64\SQLite.Interop.dll" />
+    <Content Include="packages\System.Data.SQLite.Core.1.0.111.0\build\net20\x86\SQLite.Interop.dll" />
+    <Content Include="packages\System.Data.SQLite.Core.1.0.111.0\build\net40\x64\SQLite.Interop.dll" />
+    <Content Include="packages\System.Data.SQLite.Core.1.0.111.0\build\net40\x86\SQLite.Interop.dll" />
+    <Content Include="packages\System.Data.SQLite.Core.1.0.111.0\build\net451\x64\SQLite.Interop.dll" />
+    <Content Include="packages\System.Data.SQLite.Core.1.0.111.0\build\net451\x86\SQLite.Interop.dll" />
+    <Content Include="packages\System.Data.SQLite.Core.1.0.111.0\build\net45\x64\SQLite.Interop.dll" />
+    <Content Include="packages\System.Data.SQLite.Core.1.0.111.0\build\net45\x86\SQLite.Interop.dll" />
+    <Content Include="packages\System.Data.SQLite.Core.1.0.111.0\build\net46\x64\SQLite.Interop.dll" />
+    <Content Include="packages\System.Data.SQLite.Core.1.0.111.0\build\net46\x86\SQLite.Interop.dll" />
+    <Content Include="packages\System.Data.SQLite.Core.1.0.111.0\lib\net20\System.Data.SQLite.dll" />
+    <Content Include="packages\System.Data.SQLite.Core.1.0.111.0\lib\net20\System.Data.SQLite.xml" />
+    <Content Include="packages\System.Data.SQLite.Core.1.0.111.0\lib\net40\System.Data.SQLite.dll" />
+    <Content Include="packages\System.Data.SQLite.Core.1.0.111.0\lib\net40\System.Data.SQLite.xml" />
+    <Content Include="packages\System.Data.SQLite.Core.1.0.111.0\lib\net451\System.Data.SQLite.dll" />
+    <Content Include="packages\System.Data.SQLite.Core.1.0.111.0\lib\net451\System.Data.SQLite.xml" />
+    <Content Include="packages\System.Data.SQLite.Core.1.0.111.0\lib\net45\System.Data.SQLite.dll" />
+    <Content Include="packages\System.Data.SQLite.Core.1.0.111.0\lib\net45\System.Data.SQLite.xml" />
+    <Content Include="packages\System.Data.SQLite.Core.1.0.111.0\lib\net46\System.Data.SQLite.dll" />
+    <Content Include="packages\System.Data.SQLite.Core.1.0.111.0\lib\net46\System.Data.SQLite.xml" />
+    <Content Include="packages\System.Data.SQLite.Core.1.0.111.0\lib\netstandard2.0\System.Data.SQLite.dll" />
+    <Content Include="packages\System.Data.SQLite.Core.1.0.111.0\lib\netstandard2.0\System.Data.SQLite.xml" />
+    <Content Include="packages\System.Data.SQLite.Core.1.0.111.0\runtimes\linux-x64\native\netstandard2.0\SQLite.Interop.dll" />
+    <Content Include="packages\System.Data.SQLite.Core.1.0.111.0\runtimes\osx-x64\native\netstandard2.0\SQLite.Interop.dll" />
+    <Content Include="packages\System.Data.SQLite.Core.1.0.111.0\runtimes\win-x64\native\netstandard2.0\SQLite.Interop.dll" />
+    <Content Include="packages\System.Data.SQLite.Core.1.0.111.0\runtimes\win-x86\native\netstandard2.0\SQLite.Interop.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
+    <Folder Include="obj\Debug\TempPE\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\System.Data.SQLite.Core.1.0.111.0\build\net45\System.Data.SQLite.Core.targets" Condition="Exists('packages\System.Data.SQLite.Core.1.0.111.0\build\net45\System.Data.SQLite.Core.targets')" />
