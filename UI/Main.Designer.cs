@@ -37,6 +37,8 @@
             this.BtnAdd = new System.Windows.Forms.Button();
             this.DGVEmployees = new System.Windows.Forms.DataGridView();
             this.BtnDelete = new System.Windows.Forms.Button();
+            this.TxtSearch = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DGVEmployees)).BeginInit();
             this.SuspendLayout();
             // 
@@ -113,6 +115,8 @@
             this.DGVEmployees.GridColor = System.Drawing.Color.White;
             this.DGVEmployees.Location = new System.Drawing.Point(23, 232);
             this.DGVEmployees.Name = "DGVEmployees";
+            this.DGVEmployees.ReadOnly = true;
+            this.DGVEmployees.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.DGVEmployees.Size = new System.Drawing.Size(595, 248);
             this.DGVEmployees.TabIndex = 7;
             this.DGVEmployees.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVEmployees_CellClick);
@@ -128,11 +132,32 @@
             this.BtnDelete.UseVisualStyleBackColor = true;
             this.BtnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
             // 
+            // TxtSearch
+            // 
+            this.TxtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtSearch.Location = new System.Drawing.Point(259, 197);
+            this.TxtSearch.Name = "TxtSearch";
+            this.TxtSearch.Size = new System.Drawing.Size(359, 29);
+            this.TxtSearch.TabIndex = 9;
+            this.TxtSearch.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TxtSearch_KeyUp);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(177, 200);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(76, 24);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "Search";
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(639, 492);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.TxtSearch);
             this.Controls.Add(this.BtnDelete);
             this.Controls.Add(this.DGVEmployees);
             this.Controls.Add(this.BtnAdd);
@@ -164,6 +189,8 @@
         private System.Windows.Forms.Button BtnAdd;
         private System.Windows.Forms.DataGridView DGVEmployees;
         private System.Windows.Forms.Button BtnDelete;
+        private System.Windows.Forms.TextBox TxtSearch;
+        private System.Windows.Forms.Label label4;
     }
 }
 

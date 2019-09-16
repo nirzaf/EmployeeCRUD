@@ -65,6 +65,32 @@ namespace EmployeeCRUD
         private void Main_Load(object sender, EventArgs e)
         {
             LoadEmployeeList();
+            DGVLoad();
+        }
+
+
+        public void DGVLoad()
+        {
+            // Configure the DataGridView so that users can manually change 
+            // only the column widths, which are set to fill mode. 
+            DGVEmployees.AllowUserToAddRows = false;
+            DGVEmployees.AllowUserToDeleteRows = false;
+            DGVEmployees.AllowUserToResizeRows = false;
+            DGVEmployees.RowHeadersWidthSizeMode =
+                DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            DGVEmployees.ColumnHeadersHeightSizeMode =
+                DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            DGVEmployees.AutoSizeColumnsMode =
+                DataGridViewAutoSizeColumnsMode.Fill;
+
+            // Configure the top left header cell as a reset button.
+            DGVEmployees.TopLeftHeaderCell.Value = "reset";
+            DGVEmployees.TopLeftHeaderCell.Style.ForeColor =
+                System.Drawing.Color.Blue;
+
+            // Add handlers to DataGridView events.
+            DGVEmployees.CellClick +=
+                new DataGridViewCellEventHandler(DGVEmployees_CellClick);
         }
 
         private void BtnDelete_Click(object sender, EventArgs e)
@@ -108,6 +134,23 @@ namespace EmployeeCRUD
             catch (Exception)
             {
                 throw;
+            }
+        }
+
+        private void TxtSearch_KeyUp(object sender, KeyEventArgs e)
+        {
+            try
+            {
+                BindingSource bsDvd = new BindingSource();
+                DGVEmployees.DataSource = dal.GetEmployeeList();
+                bsDvd.DataSource = DGVEmployees.DataSource;
+                bsDvd.Filter = string.Format(@"Emp_Name LIKE '%{0}%' 
+                                               OR Emp_Address LIKE '%{0}%' 
+                                               OR Emp_Mobile LIKE '%{0}%'", TxtSearch.Text.Trim());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
     }
